@@ -29,6 +29,16 @@ namespace Nixill.GTFS.Entities
       (Sunday ? 64 : 0)
     );
 
+    public int ReverseMask => (
+      (Monday ? 64 : 0) +
+      (Tuesday ? 32 : 0) +
+      (Wednesday ? 16 : 0) +
+      (Thursday ? 8 : 0) +
+      (Friday ? 4 : 0) +
+      (Saturday ? 2 : 0) +
+      (Sunday ? 1 : 0)
+    );
+
     public bool ServiceOnDayOfWeek(IsoDayOfWeek day) => day switch
     {
       IsoDayOfWeek.Sunday => Sunday,
