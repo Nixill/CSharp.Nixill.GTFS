@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-using Nixill.Collections.Grid.CSV;
 using Nixill.GTFS.Collections;
 using Nixill.GTFS.Entities;
+using Nixill.Serialization;
 using Nixill.Utils;
 
 namespace Nixill.GTFS.Sources

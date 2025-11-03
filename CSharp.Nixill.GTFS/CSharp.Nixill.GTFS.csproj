@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net8</TargetFramework>
+    <TargetFramework>net9</TargetFramework>
     <PackageId>Nixill.GTFS</PackageId>
     <Version>$(RELEASE_VERSION)</Version>
     <Authors>Nixill</Authors>
@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nixill" Version="0.10.3" />
+    <PackageReference Include="Nixill" Version="0.15.0" />
     <PackageReference Include="NodaTime" Version="3.1.10" />
   </ItemGroup>
 

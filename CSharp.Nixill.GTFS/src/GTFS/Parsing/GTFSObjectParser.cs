@@ -5,6 +5,7 @@ using Nixill.GTFS.Collections;
 using Nixill.GTFS.Entities;
 using Nixill.GTFS.Parsing.Exceptions;
 using Nixill.Utils;
+using Nixill.Utils.Extensions;
 using NodaTime;
 using NodaTime.Text;
 
@@ -35,7 +36,7 @@ namespace Nixill.GTFS.Parsing
     {
       if (input == null) return null;
       if (!ColorRegex.TryMatch(input, out Match match)) return null;
-      int col = NumberUtils.StringToInt(input, 16);
+      int col = Convert.ToInt32(input, 16);
       return Color.FromArgb(255, Color.FromArgb(col));
     }
     public static Color? GetNullableColor(this GTFSPropertyCollection properties, string key) => GetNullableColor(properties[key]);
