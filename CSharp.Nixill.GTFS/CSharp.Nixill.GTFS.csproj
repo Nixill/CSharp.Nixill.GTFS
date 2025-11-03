@@ -9,10 +9,10 @@
     <PackageDescription>An extensible GTFS parsing library.</PackageDescription>
     <RepositoryUrl>https://github.com/ShadowFoxNixill/CSharp.Nixill.GTFS</RepositoryUrl>
     <RootNamespace>Nixill.GTFS</RootNamespace>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nixill" Version="0.10.3" />
     <PackageReference Include="NodaTime" Version="3.1.10" />
   </ItemGroup>
 
