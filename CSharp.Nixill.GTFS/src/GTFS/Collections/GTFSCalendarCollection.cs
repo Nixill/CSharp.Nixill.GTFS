@@ -30,5 +30,13 @@ namespace Nixill.GTFS.Collections
     public bool Contains(string serviceID) => ServiceIDs.Contains(serviceID);
   }
 
-  public record class FullyDescribedCalendar(string Name, Calendar Calendar, IEnumerable<CalendarDate> Exceptions);
+  public record class FullyDescribedCalendar(string Name, Calendar Calendar, IEnumerable<CalendarDate> Exceptions)
+  {
+    public bool HasServiceOn(LocalDate date)
+    {
+      if (Exceptions.Any(cd => cd.IsAdded && cd.Date == date)) return true;
+      if (Calendar != null && Calendar.ServiceOn(date) && !Exceptions.Any(cd => cd.IsRemoved && cd.Date == date)) return true;
+      return false;
+    }
+  }
 }
